@@ -212,8 +212,9 @@ if [[ "$(realpath "${BUILD_DIR}")" != "$(realpath /app)" ]]; then
 fi
 
 # Call custom script to install specific version of libxmlsec1
+BIN_DIR=$(cd "$(dirname "$0")"; pwd)
 echo "-----> Installing custom libxmlsec1"
-./install_libxmlsec1.sh
+"$BIN_DIR/install_libxmlsec1.sh"
 
 # Download / Install Python, from pre-build binaries available on Amazon S3.
 # This step also bootstraps pip / setuptools.
