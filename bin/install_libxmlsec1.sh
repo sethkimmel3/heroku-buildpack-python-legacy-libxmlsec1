@@ -2,6 +2,9 @@
 
 BIN_DIR=$(cd "$(dirname "$0")"; pwd)
 
+echo "Listing files in $BIN_DIR:"
+ls -la "$BIN_DIR"
+
 # Define the location of the libxmlsec1 zip within the buildpack
 LIBXMLSEC1_ZIP="$BIN_DIR/xmlsec1-1.2.39.tar.gz"
 
