@@ -213,7 +213,7 @@ fi
 
 # Call custom script to install specific version of libxmlsec1
 echo "-----> Installing custom libxmlsec1"
-/bin/bash ./install_libxmlsec1.sh
+./install_libxmlsec1.sh
 
 # Download / Install Python, from pre-build binaries available on Amazon S3.
 # This step also bootstraps pip / setuptools.
