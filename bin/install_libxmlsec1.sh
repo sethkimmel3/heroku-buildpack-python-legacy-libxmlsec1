@@ -30,7 +30,7 @@ fi
 make
 
 # Install the compiled binaries
-sudo make install
+make install
 
 # Clean up the temporary directory
 rm -rf "$TEMP_DIR"
