@@ -24,10 +24,10 @@ fi
 
 # Configure the build environment
 # Note: You might need to adjust these commands based on the libxmlsec1 version and dependencies.
-./configure
+./configure --prefix=/app/vendor/xmlsec1
 
 # Compile the source code
-make
+make 
 
 # Install the compiled binaries
 make install
