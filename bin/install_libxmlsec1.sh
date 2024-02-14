@@ -3,7 +3,7 @@
 BIN_DIR=$(cd "$(dirname "$0")"; pwd)
 
 # Define the location of the libxmlsec1 zip within the buildpack
-LIBXMLSEC1_ZIP="$BIN_DIR/../vendor/libxmlsec1.zip"
+LIBXMLSEC1_ZIP="$BIN_DIR/xmlsec1-1.2.39.tar.gz"
 
 # Create a temporary directory for extraction
 TEMP_DIR=$(mktemp -d)
