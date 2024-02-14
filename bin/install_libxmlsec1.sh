@@ -2,9 +2,6 @@
 
 BIN_DIR=$(cd "$(dirname "$0")"; pwd)
 
-echo "Listing files in $BIN_DIR:"
-ls -la "$BIN_DIR"
-
 # Define the location of the libxmlsec1 zip within the buildpack
 LIBXMLSEC1_ZIP="$BIN_DIR/xmlsec1-1.2.39.tar.gz"
 
@@ -12,11 +9,6 @@ LIBXMLSEC1_ZIP="$BIN_DIR/xmlsec1-1.2.39.tar.gz"
 TEMP_DIR=$(mktemp -d)
 
 # Extract the tar.gz file
-tar -xzf "$LIBXMLSEC1_TAR_GZ" -C "$TEMP_DIR"
-
-# Navigate to the extracted directory
-# This assumes there's only one directory extracted. Adjust as necessary.
- Extract the tar.gz file
 tar -xzf "$LIBXMLSEC1_TAR_GZ" -C "$TEMP_DIR"
 
 # Assuming there's only one directory extracted, find it
