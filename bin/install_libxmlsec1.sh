@@ -13,7 +13,19 @@ tar -xzf "$LIBXMLSEC1_TAR_GZ" -C "$TEMP_DIR"
 
 # Navigate to the extracted directory
 # This assumes there's only one directory extracted. Adjust as necessary.
-cd "$TEMP_DIR"/* 
+ Extract the tar.gz file
+tar -xzf "$LIBXMLSEC1_TAR_GZ" -C "$TEMP_DIR"
+
+# Assuming there's only one directory extracted, find it
+EXTRACTED_DIR=$(find "$TEMP_DIR" -mindepth 1 -maxdepth 1 -type d)
+
+# Check if the directory exists and change into it
+if [ -d "$EXTRACTED_DIR" ]; then
+    cd "$EXTRACTED_DIR"
+else
+    echo "The expected directory was not found after extraction."
+    exit 1
+fi
 
 # Configure the build environment
 # Note: You might need to adjust these commands based on the libxmlsec1 version and dependencies.
