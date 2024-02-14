@@ -8,8 +8,8 @@ LIBXMLSEC1_ZIP="$BIN_DIR/xmlsec1-1.2.39.tar.gz"
 # Create a temporary directory for extraction
 TEMP_DIR=$(mktemp -d)
 
-# Extract the zip file
-unzip "$LIBXMLSEC1_ZIP" -d "$TEMP_DIR"
+# Extract the tar.gz file
+tar -xzf "$LIBXMLSEC1_TAR_GZ" -C "$TEMP_DIR"
 
 # Navigate to the extracted directory
 # This assumes there's only one directory extracted. Adjust as necessary.
