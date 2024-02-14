@@ -216,6 +216,10 @@ BIN_DIR=$(cd "$(dirname "$0")"; pwd)
 echo "-----> Installing custom libxmlsec1"
 "$BIN_DIR/install_libxmlsec1.sh"
 
+export PATH="/app/vendor/xmlsec1/bin:$PATH"
+export LD_LIBRARY_PATH="/app/vendor/xmlsec1/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/app/vendor/xmlsec1/lib/pkgconfig:$PKG_CONFIG_PATH"
+
 # Download / Install Python, from pre-build binaries available on Amazon S3.
 # This step also bootstraps pip / setuptools.
 (( start=$(nowms) ))
